@@ -202,7 +202,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### 📁 Project")
     st.markdown("[GitHub Repo](https://github.com/RituPanchal05/Netflix_Data_Analytics)", unsafe_allow_html=True)
-    st.markdown("**Ritu Panchal** | Netflix EDA Project")
+
 
 # ── Filter ───────────────────────────────────────────────────────────────────
 mask = (
@@ -217,9 +217,6 @@ dff = df[mask].copy()
 st.markdown("""
 <div style='text-align:center; padding: 24px 0 8px 0;'>
   <h1 style='font-size:3rem; margin-bottom:0;'>🎬 Netflix Content Analytics</h1>
-  <p style='color:#b3b3b3; font-size:1.1rem; margin-top:4px;'>
-     Exploratory Data Analysis Dashboard · Ritu Panchal
-  </p>
 </div>
 """, unsafe_allow_html=True)
 
