@@ -20,6 +20,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import os
 import re
 from collections import Counter
 
@@ -119,10 +120,10 @@ def make_layout(title="", height=400):
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("data/netflix_cleaned.csv")
+        df = pd.read_csv("../data/netflix_cleaned.csv")
     except FileNotFoundError:
         try:
-            df = pd.read_csv("data/netflix_titles.csv")
+            df = pd.read_csv("../data/netflix_titles.csv")
         except FileNotFoundError:
             # Demo data so the dashboard runs without files
             import numpy as np
@@ -216,7 +217,7 @@ dff = df[mask].copy()
 # ── Hero Header ──────────────────────────────────────────────────────────────
 st.markdown("""
 <div style='text-align:center; padding: 24px 0 8px 0;'>
-  <h1 style='font-size:3rem; margin-bottom:0;'>🎬 Netflix Content Analytics</h1>
+  <h1 style='font-size:3rem; margin-bottom:0;'>Netflix Content Analytics</h1>
 </div>
 """, unsafe_allow_html=True)
 
